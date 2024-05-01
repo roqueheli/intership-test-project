@@ -15,6 +15,7 @@ const Header = ({ setProducts }) => {
   // define a handleSearch function to handle the search action.
   const handleSearch = async (e) => {
     e.preventDefault();
+    setProducts(null);
     // call the getByKeyword method from the products service with the filter as parameter.
     // await for the asynchronous call to complete and receive the data.
     const data = await products.getByKeyword(filter);
